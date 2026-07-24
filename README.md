@@ -80,7 +80,7 @@ This enables systematic comparison of retrieval parameters and model configurati
 # Architecture
 
 ```text
-                          YouTube URL
+                                                   YouTube URL
                                │
                                ▼
                Transcript Fetcher (cached)
@@ -91,39 +91,41 @@ This enables systematic comparison of retrieval parameters and model configurati
                │                               │
                ▼                               ▼
        Transcript Segments           yt-dlp Audio Download
-                                               │
-                                               ▼
-                                      ffmpeg Audio Split
-                                               │
-                                               ▼
-                                    Groq Whisper Transcription
-                                               │
-                                               ▼
-                               Timestamp-Preserving Segments
-                                               │
-                                               ▼
-                            Intelligent Text Chunking
-                                               │
-                                               ▼
-                      Multilingual Sentence Embeddings
-                                               │
-                                               ▼
-                        Persistent FAISS Vector Store
-                                               │
-                                               ▼
-                         Similarity-Based Retrieval
-                                               │
-                                               ▼
-                          Grounding Distance Guard
-                                               │
-                                               ▼
-                     Prompt Construction with Citations
-                                               │
-                                               ▼
-                         Groq Llama 3.1 8B Instant
-                                               │
-                                               ▼
-               Grounded Answer + Timestamp References
+               │                               │
+               │                               ▼
+               │                      ffmpeg Audio Split
+               │                               │
+               │                               ▼
+               │                    Groq Whisper Transcription
+               │                               │
+               └───────────────┬───────────────┘
+                               │
+                               ▼
+              Timestamp-Preserving Transcript Segments
+                               │
+                               ▼
+                   Intelligent Text Chunking
+                               │
+                               ▼
+              Multilingual Sentence Embeddings
+                               │
+                               ▼
+                Persistent FAISS Vector Store
+                               │
+                               ▼
+                 Similarity-Based Retrieval
+                               │
+                               ▼
+                  Grounding Distance Guard
+                               │
+                               ▼
+          Prompt Construction with Citations
+                               │
+                               ▼
+               Groq Llama 3.1 8B Instant
+                               │
+                               ▼
+        Grounded Answer + Timestamp References
 ```
 
 ---
