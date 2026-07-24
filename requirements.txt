@@ -1,0 +1,15 @@
+streamlit>=1.37
+youtube-transcript-api>=0.6.2
+langchain>=0.2
+langchain-community>=0.2
+langchain-core>=0.2
+langchain-huggingface>=0.0.3
+langchain-groq>=0.1.9
+groq>=0.9
+yt-dlp>=2024.8.6
+langdetect>=1.0.9
+sentence-transformers>=3.0
+faiss-cpu>=1.8
+numpy>=1.26
+python-dotenv>=1.0
+requests>=2.31

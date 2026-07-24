@@ -1,0 +1,35 @@
+{
+  "_instructions": [
+    "Copy this file to eval_set.json and fill in real entries.",
+    "1. Index 2-3 videos in the app first (sidebar -> Index video).",
+    "2. For each question, write the answer YOU expect from watching the video",
+    "   (this is the 'gold' reference used for correctness scoring).",
+    "3. expected_timestamp_seconds is optional: if you know roughly where in",
+    "   the video the answer is discussed, add it (in seconds) to also check",
+    "   whether retrieval found the right part of the video, not just the",
+    "   right video. Leave it null if unsure.",
+    "4. Aim for 20-30 questions across your videos, including a few",
+    "   OUT-OF-SCOPE questions (ask something the video does NOT cover) to",
+    "   verify the grounding guard correctly refuses instead of hallucinating."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "video_url": "https://www.youtube.com/watch?v=REPLACE_ME",
+      "question": "What is the main topic of this video?",
+      "expected_answer": "Replace with the answer you'd expect, based on watching the video.",
+      "expected_timestamp_seconds": null,
+      "out_of_scope": false,
+      "notes": ""
+    },
+    {
+      "id": "q2",
+      "video_url": "https://www.youtube.com/watch?v=REPLACE_ME",
+      "question": "Replace with a question this video does NOT answer, e.g. an unrelated topic.",
+      "expected_answer": "N/A - out of scope question, model should say it isn't covered.",
+      "expected_timestamp_seconds": null,
+      "out_of_scope": true,
+      "notes": "Tests the grounding guard."
+    }
+  ]
+}
